@@ -11,21 +11,21 @@ int main()
 
   printf("*Welcome to numberGuess*\n");
   printf("I generated a random number between 1 - 100\n");
+  printf("You have 10 chances.");
 
-  for (chances = 3; chances > 0; chances--)
+  for (chances = 10; chances > 0; chances--)
   {
     printf("Enter your guess! \n");
-    printf("You have %d chances left!\n", chances);
     scanf("%d", &guess);
 
     if (guess < secretNumber)
     {
-      printf("Sorry, that was too small!\n");
+      printf("Too small!\n");
       printf("You have %d chances left!\n", chances - 1);
     }
     else if (guess > secretNumber)
     {
-      printf("Sorry, that was too high!\n");
+      printf("Too big!\n");
       printf("You have %d chances left!\n", chances - 1);
     }
     else
